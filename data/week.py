@@ -1,7 +1,7 @@
 from common.enums import WeekHandle
 
 
-class FantasyWeeks:
+class FantasyWeek:
 
     def __init__(self):
         self.week_repeats = WeekHandle.CONTINUES
@@ -17,7 +17,7 @@ class FantasyWeeks:
         return self.week_repeats
 
     @week_repeats.setter
-    def week_repeats(self, value):
+    def week_repeats(self, value: WeekHandle):
         self.week_repeats = value
 
     @property
@@ -25,7 +25,7 @@ class FantasyWeeks:
         return self.is_holy_week
 
     @is_holy_week.setter
-    def is_holy_week(self, value):
+    def is_holy_week(self, value: bool):
         self.is_holy_week = value
 
     @property
@@ -33,7 +33,7 @@ class FantasyWeeks:
         return self.week_id
 
     @week_id.setter
-    def week_id(self, value):
+    def week_id(self, value: str):
         self.week_id = value
 
     @property
@@ -41,7 +41,7 @@ class FantasyWeeks:
         return self.week_name
 
     @week_name.setter
-    def week_name(self, value):
+    def week_name(self, value: str):
         self.is_holy_week = value
 
     @property
@@ -49,7 +49,7 @@ class FantasyWeeks:
         return self.week_month_name
 
     @week_month_name.setter
-    def week_month_name(self, value):
+    def week_month_name(self, value: str):
         self.week_month_name = value
 
     @property
@@ -57,5 +57,5 @@ class FantasyWeeks:
         return self.week_month_number
 
     @week_month_number.setter
-    def week_month_number(self, value):
+    def week_month_number(self, value: int):
         self.week_month_number = value

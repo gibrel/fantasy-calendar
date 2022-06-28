@@ -1,6 +1,7 @@
+from month import FantasyMonth
 
 
-class FantasyYears:
+class FantasyYear:
 
     def __init__(self):
         self.is_leap_year = False
@@ -14,7 +15,7 @@ class FantasyYears:
         return self.is_leap_year
 
     @is_leap_year.setter
-    def is_leap_year(self, value):
+    def is_leap_year(self, value: bool):
         self.is_leap_year = value
 
     @property
@@ -22,7 +23,7 @@ class FantasyYears:
         return self.year_id
 
     @year_id.setter
-    def year_id(self, value):
+    def year_id(self, value: str):
         self.year_id = value
 
     @property
@@ -30,7 +31,7 @@ class FantasyYears:
         return self.year_name
 
     @year_name.setter
-    def year_name(self, value):
+    def year_name(self, value: str):
         self.year_name = value
 
     def list_months(self):
@@ -39,8 +40,8 @@ class FantasyYears:
     def count_months(self):
         return len(self.months)
 
-    def add_month(self, month):
+    def add_month(self, month: FantasyMonth):
         self.months.insert(len(self.months), month)
 
-    def remove_month(self, month):
+    def remove_month(self, month: FantasyMonth):
         self.months.remove(month)
