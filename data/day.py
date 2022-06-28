@@ -66,4 +66,3 @@ class FantasyDays:
     @day_week_number.setter
     def day_week_number(self, value):
         self.day_week_number = value
-

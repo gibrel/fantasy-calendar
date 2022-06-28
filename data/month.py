@@ -40,7 +40,7 @@ class FantasyMonths:
         return len(self.days)
 
     def add_day(self, day):
-        self.days.insert(day)
+        self.days.insert(len(self.days), day)
 
     def remove_day(self, day):
         self.days.remove(day)
