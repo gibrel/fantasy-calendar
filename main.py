@@ -10,10 +10,15 @@ class FantasyCalendarApp:
         self.main_window = ThemedTk(theme="black")
         self.configure_main_window()
 
+        self.current_calendar = ""
+
         self.top_menu_frame = ttk.Frame(self.main_window, height=30)
         self.top_menu_frame.pack(padx=10, pady=10, fill=X)
 
         self.main_menu = Menu(self.main_window)
+
+        self.bottom_menu_frame = ttk.Frame(self.main_window, height=30)
+        self.bottom_menu_frame.pack(padx=10, pady=10, fill=X, anchor=S)
 
         self.file_menu = Menu(self.main_menu, tearoff=0)
         self.configure_file_menu()
@@ -83,7 +88,7 @@ class FantasyCalendarApp:
         files = [  # ('All Files', '*.*'),
                  ('Fantasy Calendar File', '*.fcf'),
                  ('Comma Separated File', '*.csv')]
-        filename = tkinter.filedialog.asksaveasfilename(filetypes=files)
+        self.current_calendar = tkinter.filedialog.asksaveasfilename(filetypes=files)
 
     def send_message(self, message_type, text_message, button_message):
         """
